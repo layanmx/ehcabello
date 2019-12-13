@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <!-- New Folder -->
+    <record id="documents_import_customer_invoices_cfdis_folder" model="documents.folder">
+        <field name="name">Customer Invoices to Import</field>
+        <field name="sequence">100</field>
+    </record>
+    <record id="documents_import_vendor_bills_cfdis_folder" model="documents.folder">
+        <field name="name">Vendor Bills to Import</field>
+        <field name="sequence">200</field>
+    </record>
+    <record id="documents_import_payments_cfdis_folder" model="documents.folder">
+        <field name="name">Complement Payments to Import</field>
+        <field name="sequence">300</field>
+    </record>
+
+    <record id="ir_cron_import_customer_invoices" model="ir.cron">
+        <field name="name">Import Customer Invoices</field>
+        <field name="model_id" eval="ref('account.model_account_invoice')"/>
+        <field name="state">code</field>
+        <field eval="False" name="active"/>
+        <field name="user_id" ref="base.user_root"/>
+        <field name="interval_number">5</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="nextcall" eval="(DateTime.now() + timedelta(days=1)).strftime('%Y-%m-%d 22:00:00')" />
+        <field eval="False" name="doall"/>
+        <field name="code"># Fist parameter is for invoice type
+# Second parameter is for qty of invoices imported per execution
+res = env['import.csv.invoice.wizard'].import_invoices_from_csv('out', 50)
+wrongfiles = res.get('wrongfiles', {})
+if wrongfiles:
+    uuids = list(wrongfiles.keys())
+    log(uuids, level='wrong_cfdi')
+    msg = ''
+    for uuid in uuids:
+        msg += '%s\n' % uuid
+        errors = list(wrongfiles[uuid].keys())
+        for error in errors:
+            msg += '%s: %s\n' % (error, wrongfiles[uuid][error])
+    log(msg, level='cfdi_errors')
+</field>
+        </record>
+    <record id="ir_cron_import_vendor_bills" model="ir.cron">
+        <field name="name">Import Vendor Bills</field>
+        <field name="model_id" eval="ref('account.model_account_invoice')"/>
+        <field name="state">code</field>
+        <field eval="False" name="active"/>
+        <field name="user_id" ref="base.user_root"/>
+        <field name="interval_number">5</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="nextcall" eval="(DateTime.now() + timedelta(days=1)).strftime('%Y-%m-%d 22:00:00')" />
+        <field eval="False" name="doall"/>
+        <field name="code"># Fist parameter is for invoice type
+# Second parameter is for qty of invoices imported per execution
+res = env['import.csv.invoice.wizard'].import_invoices_from_csv('in', 50)
+wrongfiles = res.get('wrongfiles', {})
+if wrongfiles:
+    uuids = list(wrongfiles.keys())
+    log(uuids, level='wrong_cfdi')
+    msg = ''
+    for uuid in uuids:
+        msg += '%s\n' % uuid
+        errors = list(wrongfiles[uuid].keys())
+        for error in errors:
+            msg += '%s: %s\n' % (error, wrongfiles[uuid][error])
+    log(msg, level='cfdi_errors')
+</field>
+    </record>
+    <record id="ir_cron_import_payments" model="ir.cron">
+        <field name="name">Import Complement Payments</field>
+        <field name="model_id" eval="ref('account.model_account_payment')"/>
+        <field name="state">code</field>
+        <field eval="False" name="active"/>
+        <field name="user_id" ref="base.user_root"/>
+        <field name="interval_number">10</field>
+        <field name="interval_type">minutes</field>
+        <field name="numbercall">-1</field>
+        <field name="nextcall" eval="(DateTime.now() + timedelta(days=1)).strftime('%Y-%m-%d 22:00:00')" />
+        <field eval="False" name="doall"/>
+        <field name="code">payment_obj = env['account.payment']
+folder_id = env.ref('l10n_mx_edi_import_bills_csv.documents_import_payments_cfdis_folder').id
+attachments = env['ir.attachment'].search([('folder_id', '=', folder_id)], limit=50)
+rule = env.ref('l10n_mx_edi_document.mexican_document_rule')
+for att in attachments:
+    try:
+        payment_ids = rule.create_record(att).get('res_id')
+        payment_obj.browse(payment_ids).validate_checks()
+    except Exception as e:
+        log('Error: %s when importing payment: %s' % (e, att.name))
+</field>
+    </record>
+</odoo>

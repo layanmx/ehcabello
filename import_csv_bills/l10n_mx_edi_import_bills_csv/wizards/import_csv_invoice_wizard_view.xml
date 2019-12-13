@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record model="ir.ui.view" id="import_csv_invoice_wizard_form_view">
+        <field name="name">import_csv_invoice_wizard_form</field>
+        <field name="model">import.csv.invoice.wizard</field>
+        <field name="arch" type="xml">
+            <form class="form-xml">
+                <group>
+                    <group>
+                        <field name="type"/>
+                        <field name="file"/>
+                    </group>
+                </group>
+                <footer>
+                    <button string='Import' name="import_csv" type="object" class="btn-primary"/>
+                    <button string='Cancel previous import' name="cancel_old_import" type="object" class="btn-secondary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record id="import_csv_invoice_wizard_action" model="ir.actions.act_window">
+        <field name="name">Import Csv Invoices</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name='res_model'>import.csv.invoice.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="import_csv_invoice_wizard_form_view"/>
+        <field name="context">{'l10n_mx_edi_invoice_type': 'in'}</field>
+        <field name="target">new</field>
+    </record>
+    <menuitem action="import_csv_invoice_wizard_action" id="menu_import_csv_invoice_wizard" name="Import multiple Invoices from CSV" parent="account.menu_finance_entries" groups="base.group_no_one"/>
+    <menuitem id="l10n_mx_edi_customer_bills.menu_atach_xmls_customer_wizard" parent="account.menu_finance_receivables" groups="base.group_no_one"/>
+    <menuitem id="l10n_mx_edi_vendor_bills.menu_atach_xmls_wizard" parent="account.menu_finance_payables" groups="base.group_no_one"/>
+</odoo>
