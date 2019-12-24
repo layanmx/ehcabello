@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<odoo>
+
+    <record id="base.main_partner" model="res.partner">
+        <field name="vat">EKU9003173C9</field>
+        <field name="country_id" ref="base.mx"/>
+        <field name="state_id" ref="base.state_mx_jal"/>
+        <field name="street2">Company Street 2</field>
+        <field name="city">Company City</field>
+        <field name="zip">37200</field>
+        <field name="property_account_position_id" ref="l10n_mx.1_account_fiscal_position_601_fr"/>
+    </record>
+    <record id="cfdi_certs" model="l10n_mx_edi.certificate">
+        <field name="content" type="base64" file="l10n_mx_edi/demo/pac_credentials/certificate.cer"/>
+        <field name="key" type="base64" file="l10n_mx_edi/demo/pac_credentials/certificate.key"/>
+        <field name="password">12345678a</field>
+    </record>
+
+    <record id="cfdi_conf" model="res.config.settings">
+        <field name="l10n_mx_edi_pac">finkok</field>
+        <field name="l10n_mx_edi_pac_test_env">True</field>
+        <field name="l10n_mx_edi_certificate_ids" eval="[(6, 0, [ref('l10n_mx_enterprise.cfdi_certs')])]"/>
+    </record>
+
+    <record id="base.user_root" model="res.users">
+        <field name="groups_id" eval="[
+            (4, ref('account.group_account_manager')),
+            (4, ref('base.group_multi_currency')),
+            (4, ref('base.group_no_one'))
+            ]"/>
+    </record>
+
+    <function name="write" model="account.journal">
+        <value model="account.journal" eval="obj().search([]).ids"/>
+        <value eval="{'update_posted': [(6, 0, [True])]}"/>
+    </function>
+    <function name="unlink" model="res.currency.rate" eval="[()]"/>
+
+    <record id="res_config_settings_01" model="res.config.settings">
+        <field name="group_multi_currency">True</field>
+    </record>
+    <record id="res_config_settings_02" model="res.config.settings">
+        <field name="group_multi_company">True</field>
+        <field name="company_share_partner">False</field>
+        <field name="company_share_product">False</field>
+    </record>
+</odoo>

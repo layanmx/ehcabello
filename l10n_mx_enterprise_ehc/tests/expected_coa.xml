@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<catalogocuentas:Catalogo xmlns:catalogocuentas="http://www.sat.gob.mx/esquemas/ContabilidadE/1_3/CatalogoCuentas" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="1.3" xsi:schemaLocation="http://www.sat.gob.mx/esquemas/ContabilidadE/1_3/CatalogoCuentas http://www.sat.gob.mx/esquemas/ContabilidadE/1_3/CatalogoCuentas/CatalogoCuentas_1_3.xsd" RFC="EKU9003173C9" Mes="" Anio="" Sello="" noCertificado="30001000000400002434"
+    Certificado="MIIFuzCCA6OgAwIBAgIUMzAwMDEwMDAwMDA0MDAwMDI0MzQwDQYJKoZIhvcNAQELBQAwggErMQ8wDQYDVQQDDAZBQyBVQVQxLjAsBgNVBAoMJVNFUlZJQ0lPIERFIEFETUlOSVNUUkFDSU9OIFRSSUJVVEFSSUExGjAYBgNVBAsMEVNBVC1JRVMgQXV0aG9yaXR5MSgwJgYJKoZIhvcNAQkBFhlvc2Nhci5tYXJ0aW5lekBzYXQuZ29iLm14MR0wGwYDVQQJDBQzcmEgY2VycmFkYSBkZSBjYWRpejEOMAwGA1UEEQwFMDYzNzAxCzAJBgNVBAYTAk1YMRkwFwYDVQQIDBBDSVVEQUQgREUgTUVYSUNPMREwDwYDVQQHDAhDT1lPQUNBTjERMA8GA1UELRMIMi41LjQuNDUxJTAjBgkqhkiG9w0BCQITFnJlc3BvbnNhYmxlOiBBQ0RNQS1TQVQwHhcNMTkwNjE3MTk0NDE0WhcNMjMwNjE3MTk0NDE0WjCB4jEnMCUGA1UEAxMeRVNDVUVMQSBLRU1QRVIgVVJHQVRFIFNBIERFIENWMScwJQYDVQQpEx5FU0NVRUxBIEtFTVBFUiBVUkdBVEUgU0EgREUgQ1YxJzAlBgNVBAoTHkVTQ1VFTEEgS0VNUEVSIFVSR0FURSBTQSBERSBDVjElMCMGA1UELRMcRUtVOTAwMzE3M0M5IC8gWElRQjg5MTExNlFFNDEeMBwGA1UEBRMVIC8gWElRQjg5MTExNk1HUk1aUjA1MR4wHAYDVQQLExVFc2N1ZWxhIEtlbXBlciBVcmdhdGUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCN0peKpgfOL75iYRv1fqq+oVYsLPVUR/GibYmGKc9InHFy5lYF6OTYjnIIvmkOdRobbGlCUxORX/tLsl8Ya9gm6Yo7hHnODRBIDup3GISFzB/96R9K/MzYQOcscMIoBDARaycnLvy7FlMvO7/rlVnsSARxZRO8Kz8Zkksj2zpeYpjZIya/369+oGqQk1cTRkHo59JvJ4Tfbk/3iIyf4H/Ini9nBe9cYWo0MnKob7DDt/vsdi5tA8mMtA953LapNyCZIDCRQQlUGNgDqY9/8F5mUvVgkcczsIgGdvf9vMQPSf3jjCiKj7j6ucxl1+FwJWmbvgNmiaUR/0q4m2rm78lFAgMBAAGjHTAbMAwGA1UdEwEB/wQCMAAwCwYDVR0PBAQDAgbAMA0GCSqGSIb3DQEBCwUAA4ICAQBcpj1TjT4jiinIujIdAlFzE6kRwYJCnDG08zSp4kSnShjxADGEXH2chehKMV0FY7c4njA5eDGdA/G2OCTPvF5rpeCZP5Dw504RZkYDl2suRz+wa1sNBVpbnBJEK0fQcN3IftBwsgNFdFhUtCyw3lus1SSJbPxjLHS6FcZZ51YSeIfcNXOAuTqdimusaXq15GrSrCOkM6n2jfj2sMJYM2HXaXJ6rGTEgYmhYdwxWtil6RfZB+fGQ/H9I9WLnl4KTZUS6C9+NLHh4FPDhSk19fpS2S/56aqgFoGAkXAYt9Fy5ECaPcULIfJ1DEbsXKyRdCv3JY89+0MNkOdaDnsemS2o5Gl08zI4iYtt3L40gAZ60NPh31kVLnYNsmvfNxYyKp+AeJtDHyW9w7ftM0Hoi+BuRmcAQSKFV3pk8j51la+jrRBrAUv8blbRcQ5BiZUwJzHFEKIwTsRGoRyEx96sNnB03n6GTwjIGz92SmLdNl95r9rkvp+2m4S6q1lPuXaFg7DGBrXWC8iyqeWE2iobdwIIuXPTMVqQb12m1dAkJVRO5NdHnP/MpqOvOgLqoZBNHGyBg4Gqm4sCJHCxA1c8Elfa2RQTCk0tAzllL4vOnI1GHkGJn65xokGsaU4B4D36xh7eWrfj4/pgWHmtoDAYa8wzSwo2GVCZOs+mtEgOQB91/g==">
+  <catalogocuentas:Ctas CodAgrup="101" NumCta="101" Desc="Caja" Nivel="1" Natur="D"/>
+  <catalogocuentas:Ctas CodAgrup="101.01" NumCta="101.01" Desc="Caja y efectivo" Nivel="2" Natur="D"/>
+  <catalogocuentas:Ctas CodAgrup="102" NumCta="102" Desc="Bancos" Nivel="1" Natur="D"/>
+  <catalogocuentas:Ctas CodAgrup="102.01" NumCta="102.01" Desc="Bancos nacionales" Nivel="2" Natur="D"/>
+  <catalogocuentas:Ctas CodAgrup="102.02" NumCta="102.02" Desc="Bancos extranjeros" Nivel="2" Natur="D"/>
+  <catalogocuentas:Ctas CodAgrup="105" NumCta="105" Desc="Clientes" Nivel="1" Natur="D"/>
+  <catalogocuentas:Ctas CodAgrup="105.01" NumCta="105.01" Desc="Clientes nacionales" Nivel="2" Natur="D"/>
+  <catalogocuentas:Ctas CodAgrup="108" NumCta="108" Desc="Estimación de cuentas incobrables" Nivel="1" Natur="D"/>
+  <catalogocuentas:Ctas CodAgrup="108.01" NumCta="108.01" Desc="Estimación de cuentas incobrables nacional" Nivel="2" Natur="D"/>
+  <catalogocuentas:Ctas CodAgrup="108.02" NumCta="108.02" Desc="Estimación de cuentas incobrables extranjero" Nivel="2" Natur="D"/>
+  <catalogocuentas:Ctas CodAgrup="115" NumCta="115" Desc="Inventario" Nivel="1" Natur="D"/>
+  <catalogocuentas:Ctas CodAgrup="115.01" NumCta="115.01" Desc="Inventario" Nivel="2" Natur="D"/>
+  <catalogocuentas:Ctas CodAgrup="115.02" NumCta="115.02" Desc="Materia prima y materiales" Nivel="2" Natur="D"/>
+  <catalogocuentas:Ctas CodAgrup="115.03" NumCta="115.03" Desc="Producción en proceso" Nivel="2" Natur="D"/>
+  <catalogocuentas:Ctas CodAgrup="115.04" NumCta="115.04" Desc="Productos terminados" Nivel="2" Natur="D"/>
+  <catalogocuentas:Ctas CodAgrup="115.05" NumCta="115.05" Desc="Mercancías en tránsito" Nivel="2" Natur="D"/>
+  <catalogocuentas:Ctas CodAgrup="115.06" NumCta="115.06" Desc="Mercancías en poder de terceros" Nivel="2" Natur="D"/>
+  <catalogocuentas:Ctas CodAgrup="118" NumCta="118" Desc="Impuestos acreditables pagados" Nivel="1" Natur="D"/>
+  <catalogocuentas:Ctas CodAgrup="118.01" NumCta="118.01" Desc="IVA acreditable pagado" Nivel="2" Natur="D"/>
+  <catalogocuentas:Ctas CodAgrup="119" NumCta="119" Desc="Impuestos acreditables por pagar" Nivel="1" Natur="A"/>
+  <catalogocuentas:Ctas CodAgrup="119.01" NumCta="119.01" Desc="IVA pendiente de pago" Nivel="2" Natur="A"/>
+  <catalogocuentas:Ctas CodAgrup="120" NumCta="120" Desc="Anticipo a proveedores" Nivel="1" Natur="D"/>
+  <catalogocuentas:Ctas CodAgrup="120.01" NumCta="120.01" Desc="Anticipo a proveedores nacional" Nivel="2" Natur="D"/>
+  <catalogocuentas:Ctas CodAgrup="120.02" NumCta="120.02" Desc="Anticipo a proveedores extranjero" Nivel="2" Natur="D"/>
+  <catalogocuentas:Ctas CodAgrup="201" NumCta="201" Desc="Proveedores" Nivel="1" Natur="A"/>
+  <catalogocuentas:Ctas CodAgrup="201.01" NumCta="201.01" Desc="Proveedores nacionales" Nivel="2" Natur="A"/>
+  <catalogocuentas:Ctas CodAgrup="206" NumCta="206" Desc="Anticipo de cliente" Nivel="1" Natur="A"/>
+  <catalogocuentas:Ctas CodAgrup="206.01" NumCta="206.01" Desc="Anticipo de cliente nacional" Nivel="2" Natur="A"/>
+  <catalogocuentas:Ctas CodAgrup="206.02" NumCta="206.02" Desc="Anticipo de cliente extranjero" Nivel="2" Natur="A"/>
+  <catalogocuentas:Ctas CodAgrup="208" NumCta="208" Desc="Impuestos trasladados cobrados" Nivel="1" Natur="A"/>
+  <catalogocuentas:Ctas CodAgrup="208.01" NumCta="208.01" Desc="IVA trasladado cobrado" Nivel="2" Natur="A"/>
+  <catalogocuentas:Ctas CodAgrup="209" NumCta="209" Desc="Impuestos trasladados no cobrados" Nivel="1" Natur="A"/>
+  <catalogocuentas:Ctas CodAgrup="209.01" NumCta="209.01" Desc="IVA trasladado no cobrado" Nivel="2" Natur="A"/>
+  <catalogocuentas:Ctas CodAgrup="216" NumCta="216" Desc="Impuestos retenidos" Nivel="1" Natur="A"/>
+  <catalogocuentas:Ctas CodAgrup="216.03" NumCta="216.03" Desc="Impuestos retenidos de ISR por arrendamiento" Nivel="2" Natur="A"/>
+  <catalogocuentas:Ctas CodAgrup="216.04" NumCta="216.04" Desc="Impuestos retenidos de ISR por servicios profesionales" Nivel="2" Natur="A"/>
+  <catalogocuentas:Ctas CodAgrup="216.10" NumCta="216.10" Desc="Impuestos retenidos de IVA" Nivel="2" Natur="A"/>
+  <catalogocuentas:Ctas CodAgrup="302" NumCta="302" Desc="Patrimonio" Nivel="1" Natur="A"/>
+  <catalogocuentas:Ctas CodAgrup="302.01" NumCta="302.01" Desc="Patrimonio" Nivel="2" Natur="A"/>
+  <catalogocuentas:Ctas CodAgrup="304" NumCta="304" Desc="Resultado de ejercicios anteriores" Nivel="1" Natur="A"/>
+  <catalogocuentas:Ctas CodAgrup="304.01" NumCta="304.01" Desc="Utilidad de ejercicios anteriores" Nivel="2" Natur="A"/>
+  <catalogocuentas:Ctas CodAgrup="401" NumCta="401" Desc="Ingresos" Nivel="1" Natur="A"/>
+  <catalogocuentas:Ctas CodAgrup="401.01" NumCta="401.01" Desc="Ventas y/o servicios gravados a la tasa general" Nivel="2" Natur="A"/>
+  <catalogocuentas:Ctas CodAgrup="501" NumCta="501" Desc="Costo de venta y/o servicio" Nivel="1" Natur="D"/>
+  <catalogocuentas:Ctas CodAgrup="501.01" NumCta="501.01" Desc="Costo de venta" Nivel="2" Natur="D"/>
+  <catalogocuentas:Ctas CodAgrup="601" NumCta="601" Desc="Gastos generales" Nivel="1" Natur="D"/>
+  <catalogocuentas:Ctas CodAgrup="601.84" NumCta="601.84" Desc="Otros gastos generales" Nivel="2" Natur="D"/>
+  <catalogocuentas:Ctas CodAgrup="701" NumCta="701" Desc="Gastos financieros" Nivel="1" Natur="D"/>
+  <catalogocuentas:Ctas CodAgrup="701.01" NumCta="701.01" Desc="Pérdida cambiaria" Nivel="2" Natur="D"/>
+  <catalogocuentas:Ctas CodAgrup="702" NumCta="702" Desc="Productos financieros" Nivel="1" Natur="A"/>
+  <catalogocuentas:Ctas CodAgrup="702.01" NumCta="702.01" Desc="Utilidad cambiaria" Nivel="2" Natur="A"/>
+  <catalogocuentas:Ctas CodAgrup="801" NumCta="801" Desc="UFIN del ejercicio" Nivel="1" Natur="D"/>
+  <catalogocuentas:Ctas CodAgrup="801.01" NumCta="801.01" Desc="UFIN" Nivel="2" Natur="D"/>
+</catalogocuentas:Catalogo>
