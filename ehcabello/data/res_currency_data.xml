@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="base.USD" model="res.currency">
+        <field name="symbol">USD</field>
+    </record>
+
+    <record id="base.MXN" model="res.currency">
+        <field name="symbol">MXN</field>
+    </record>
+
+    <record forcecreate="True" id="rate_precision" model="decimal.precision">
+        <field name="name">Rate Precision</field>
+        <field name="digits">16</field>
+    </record>
+</odoo>
