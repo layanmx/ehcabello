@@ -27,7 +27,10 @@
         <field eval="False" name="doall"/>
         <field name="code"># Fist parameter is for invoice type
 # Second parameter is for qty of invoices imported per execution
-res = env['import.csv.invoice.wizard'].import_invoices_from_csv('out', 50)
+ctx = env.context.copy()
+# journal_id = env['account.journal'].search([('name', '=', 'journal_name')], limit=1).id
+# ctx['journal_id'] = journal_id
+res = env['import.csv.invoice.wizard'].with_context(ctx).import_invoices_from_csv('out', 50)
 wrongfiles = res.get('wrongfiles', {})
 if wrongfiles:
     uuids = list(wrongfiles.keys())
@@ -54,7 +57,10 @@ if wrongfiles:
         <field eval="False" name="doall"/>
         <field name="code"># Fist parameter is for invoice type
 # Second parameter is for qty of invoices imported per execution
-res = env['import.csv.invoice.wizard'].import_invoices_from_csv('in', 50)
+ctx = env.context.copy()
+# journal_id = env['account.journal'].search([('name', '=', 'journal_name')], limit=1).id
+# ctx['journal_id'] = journal_id
+res = env['import.csv.invoice.wizard'].with_context(ctx).import_invoices_from_csv('in', 50)
 wrongfiles = res.get('wrongfiles', {})
 if wrongfiles:
     uuids = list(wrongfiles.keys())

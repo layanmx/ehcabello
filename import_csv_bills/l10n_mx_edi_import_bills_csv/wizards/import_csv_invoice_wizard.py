@@ -96,8 +96,9 @@ class ImportCsvInvoiceWizard(models.TransientModel):
                     if line_count == lines:
                         break
         wiz = self.env['attach.xmls.wizard']
-        res = wiz.with_context(
-            l10n_mx_edi_invoice_type=invoice_type).check_xml(xml_files)
+        ctx = self._context.copy()
+        ctx['l10n_mx_edi_invoice_type'] = invoice_type
+        res = wiz.with_context(ctx).check_xml(xml_files)
 
         wrongfiles = res.get('wrongfiles', {})
         if wrongfiles and create_partner:
@@ -107,10 +108,9 @@ class ImportCsvInvoiceWizard(models.TransientModel):
                 if wrongfiles[uuid].get('supplier', {}):
                     xml64 = wrongfiles[uuid].get('xml64')
                     xml_files[uuid] = xml64
-                    wiz.with_context(l10n_mx_edi_invoice_type=invoice_type).\
+                    wiz.with_context(ctx).\
                         create_partner(xml64, uuid)
-            res_2 = wiz.with_context(
-                l10n_mx_edi_invoice_type=invoice_type).check_xml(xml_files)
+            res_2 = wiz.with_context(ctx).check_xml(xml_files)
             invoices = res_2.get('invoices', {})
             new_uuids = list(invoices.keys())
             for key in new_uuids:
