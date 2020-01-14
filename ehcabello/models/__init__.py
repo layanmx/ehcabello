@@ -2,3 +2,4 @@
 # License AGPL-3 or later (http://www.gnu.org/licenses/agpl).
 
 from . import res_currency
+from . import account_payment
