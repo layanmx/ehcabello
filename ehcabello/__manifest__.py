@@ -11,6 +11,7 @@
     'category': 'Installer',
     'version': '12.0.0.0.1',
     'depends': [
+        'account',
         'decimal_precision',
     ],
     'test': [
