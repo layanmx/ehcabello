@@ -3,7 +3,7 @@
 {
     'name': 'Eléctrica Hidráulica Cabello company',
     'summary': '''
-    Instance creator for Eléctrica Hidráulica Cabello. This is the app.
+    Instance creator for Eléctrica Hidráulica Cabello. This is the app..
     ''',
     'author': 'Vauxoo',
     'website': 'https://www.vauxoo.com',
